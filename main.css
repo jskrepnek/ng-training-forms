@@ -1,0 +1,38 @@
+input.name {
+	border-width: 5px;
+}
+input.name.ng-pristine {
+	border-color: #00FF00;
+}
+
+input.name.ng-dirty {
+	border-color: #FF0000;
+}
+
+input.name.ng-dirty.ng-invalid {
+	background-color: #FF0000;
+}
+
+input.name.ng-valid {
+	background-color: #00FF00;
+}
+
+input.age.ng-invalid-min {
+	background-color: #FFFF00;	
+}
+
+input.age.ng-invalid-max {
+	background-color: #FF0000;
+}
+
+input.username.ng-valid {
+	background-color: #00FF00;
+}
+
+input.username.ng-invalid {
+	background-color: #FF0000;
+}
+
+input.username.ng-pending {
+	background-color: #FFFF00;
+}

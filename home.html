@@ -1,3 +1,18 @@
-<div>
 	<h1>Forms</h1>
+
+<div ng-controller="HomeController">
+	<h2>Forms Styles</h2>
+	<form name="form" novalidate>
+		Name: <input name="name" class="name" type="text" ng-model="name" required ng-minLength="nameMinLength" aa-pattern /><span>Name = {{ name }}<input type="number" ng-model="nameMinLength"/></span><span ng-show="form.name.$error.minlength">Name must be at least {{ nameMinLength }} letters</span><span ng-show="form.name.$error.aaPattern">Must be in the format A*A</span><br/>
+		Age: <input name="age" class="age" type="number" ng-model="age" min="5" max="10" required /><span ng-show="form.age.$dirty && form.age.$error.required">Age is required</span><span ng-show="form.age.$error.number">Age must be a number</span><br/>
+		Username: <input class="username" name="username" ng-model="username" required unique/><br/>
+		Form Invalid: {{ form.$invalid }}<br/>
+		Form Valid: {{ form.$valid }}<br/>
+		Form Pristine: {{ form.$pristine }}<br/>
+		Form Pending {{ form.$pending }}<br />
+		Age Invalid: {{ form.age.$invalid }}<br/>
+		Age Pristine: {{ form.age.$pristine }}<br/>
+		Username Pending: {{ form.username.$pending }}<br/>
+		<button ng-click="log()">Log</button>
+	</form>
 </div>
